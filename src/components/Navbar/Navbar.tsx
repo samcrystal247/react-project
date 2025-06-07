@@ -22,6 +22,7 @@ const Navbar = () => {
         <a href="/Login">Login</a>
         <a href="/register">Register</a>
         <p onClick={Sam}>About us</p>
+        <a href="/About"> About</a>/
       </p>
     </div>
   );
