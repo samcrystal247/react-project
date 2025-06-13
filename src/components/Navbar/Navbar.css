@@ -7,3 +7,7 @@
   font-size: xx-large;
   color: blueviolet;
 }
+.service {
+  color: blue;
+  cursor: pointer;
+}

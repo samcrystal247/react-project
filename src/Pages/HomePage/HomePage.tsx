@@ -5,6 +5,9 @@ import Header from "../../components/Header/Header";
 import About from "../About/About";
 import LoginScreen from "../LoginPage/Login";
 import Navbar2 from "../../components/Navbar/Navbar2";
+import Serivice from "../Services/Serivice";
+import Blog from "../../components/Blog/Blog";
+import Events from "../../Rough/Events";
 
 const HomePage = () => {
   return (
@@ -15,6 +18,9 @@ const HomePage = () => {
       <About />
       <LoginScreen />
       <Navbar2 />
+      <Serivice />
+      <Blog />
+      <Events />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );

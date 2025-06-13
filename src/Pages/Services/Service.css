@@ -1,0 +1,35 @@
+.our-servivices-div {
+  text-align: center;
+  font-size: 5vh;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.hz-line {
+  background-color: yellow;
+  height: 0.5vh;
+  width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sreivice-section-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5rem;
+}
+
+.sreivice-section-flex h4 {
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 2vh;
+  color: gray;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.sreivice-section-flex p {
+  width: 75%;
+  font-size: 20px;
+}

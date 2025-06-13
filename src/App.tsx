@@ -10,6 +10,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import Login from "./Pages/LoginPage/Login";
 import Register from "./Pages/SignUp/Register";
 import About from "./Pages/About/About";
+import Serivice from "./Pages/Services/Serivice";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Service" element={<Serivice />} />
       </Routes>
     </>
   );

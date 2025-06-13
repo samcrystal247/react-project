@@ -8,6 +8,9 @@ const Navbar = () => {
   const Sam = () => {
     navigate("/About us");
   };
+  const uche = () => {
+    navigate("/Service");
+  };
   return (
     <div>
       <h3 className="smaple-h3"> my name is samuel</h3>
@@ -22,7 +25,10 @@ const Navbar = () => {
         <a href="/Login">Login</a>
         <a href="/register">Register</a>
         <p onClick={Sam}>About us</p>
-        <a href="/About"> About</a>/
+        <a href="/About"> About</a>
+        <p onClick={uche} className="service">
+          Service
+        </p>
       </p>
     </div>
   );
