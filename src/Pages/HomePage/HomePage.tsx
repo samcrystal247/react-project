@@ -8,6 +8,7 @@ import Navbar2 from "../../components/Navbar/Navbar2";
 import Serivice from "../Services/Serivice";
 import Blog from "../../components/Blog/Blog";
 import Events from "../../Rough/Events";
+import FetchAllData from "../../components/FetchData/FetchAllData";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <Serivice />
       <Blog />
       <Events />
+      <FetchAllData />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
