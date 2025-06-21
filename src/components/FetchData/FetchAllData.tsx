@@ -37,8 +37,13 @@ const FetchAllData = () => {
 
               <Card.Body>
                 <Card.Text>{items.color}</Card.Text>
+                <Card.Text>{items.createdAt}</Card.Text>
+                <Card.Text>{items.description}</Card.Text>
                 <Card.Title>{items.tittle}</Card.Title>
                 <Card.Text>{items.price}</Card.Text>
+                <Card.Text>{items.quantity}</Card.Text>
+                <Card.Text>{items.sold}</Card.Text>
+
                 <Button variant="primary">Add to cart</Button>
               </Card.Body>
             </Card>
