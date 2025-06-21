@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
 const FetchAllData = () => {
   const [viewResult, setViewResult] = useState([]);
   console.log(viewResult);
@@ -7,7 +10,7 @@ const FetchAllData = () => {
     const fetchPosts = async () => {
       try {
         const { data } = await axios.get(
-          "https://api-adsng.c9ja.com/cretive-products/pag/all?page=1"
+          "https://fullstack-student-backend.onrender.com/api/products"
         );
         console.log(data);
 
@@ -21,23 +24,24 @@ const FetchAllData = () => {
   }, []);
   return (
     <div>
-      <h1>Display Data Screen</h1>
+      <h1 style={{ cursor: "pointer" }}>Display Data Screen</h1>
       <div>
         {viewResult.map((items: any) => (
           <>
-            <h1>{items.category}</h1>
-            <h2>{items.price}</h2>
-            <p>{items.tittle}</p>
-            <p>{items.description}</p>
-            <div>
-              {items.fileUrl.map((items: any) => (
+            <Card style={{ width: "18rem" }}>
+              {items.images.map((items: any) => (
                 <>
-                  <img src={items} alt="" />
+                  <Card.Img variant="top" src={items.url} />
                 </>
               ))}
-            </div>
-            <p>{items.subcategory}</p>
-            <p>{items.slug}</p>
+
+              <Card.Body>
+                <Card.Text>{items.color}</Card.Text>
+                <Card.Title>{items.tittle}</Card.Title>
+                <Card.Text>{items.price}</Card.Text>
+                <Button variant="primary">Add to cart</Button>
+              </Card.Body>
+            </Card>
           </>
         ))}
       </div>
