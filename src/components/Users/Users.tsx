@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link, useNavigate } from "react-router-dom";
 
-const FetchAllData = () => {
+const Users = () => {
   const [viewResult, setViewResult] = useState([]);
 
   console.log(viewResult);
@@ -12,7 +12,7 @@ const FetchAllData = () => {
     const fetchPosts = async () => {
       try {
         const { data } = await axios.get(
-          "https://fullstack-student-backend.onrender.com/api/products"
+          "https://fullstack-student-backend.onrender.com/api/auth"
         );
         console.log(data);
 
@@ -25,12 +25,12 @@ const FetchAllData = () => {
     fetchPosts();
   }, []);
   const navigate = useNavigate();
-  const productDetails = (_id: any) => {
-    navigate(`/productDetails/${_id}`);
+  const UsersData = (_id: any) => {
+    navigate(`/UsersData/${_id}`);
   };
   return (
     <div>
-      <h1 style={{ cursor: "pointer" }}>Display Data Screen</h1>
+      <h1 style={{ cursor: "pointer" }}>users data</h1>
       <div
         style={{
           display: "flex",
@@ -39,27 +39,31 @@ const FetchAllData = () => {
           gap: "20px",
         }}
       >
-        {viewResult.map((items: any) => (
+        {viewResult.map((Users: any) => (
           <>
             <Card style={{ width: "18rem" }}>
-              {items.images.map((items: any) => (
+              {/* {items.images.map((items: any) => (
                 <>
-                  <Card.Img variant="top" src={items.url} />
+                  <Card.Img variant="top" src={items} />
                 </>
-              ))}
+              ))} */}
               {/* <a href={`/productDetails/${items._id}`}> */}
               {/* <Link to={`/productDetails/${items._id}`}> */}
 
-              <Card.Body onClick={() => productDetails(items._id)}>
-                <Card.Text>{items.color}</Card.Text>
-                <Card.Text>{items.createdAt}</Card.Text>
-                <Card.Text>{items.description}</Card.Text>
-                <Card.Title>{items.tittle}</Card.Title>
-                <Card.Text>{items.price}</Card.Text>
-                <Card.Text>{items.quantity}</Card.Text>
-                <Card.Text>{items.sold}</Card.Text>
-
-                <Button variant="primary">Add to cart</Button>
+              <Card.Body onClick={() => UsersData(Users._id)}>
+                <Card.Text>{Users.firstName}</Card.Text>
+                <Card.Text>{Users.lastName}</Card.Text>
+                <Card.Text>{Users.phoneNumber}</Card.Text>
+                <Card.Title>{Users.email}</Card.Title>
+                <Card.Text>{Users.isAdmin}</Card.Text>
+                <Card.Text>{Users.password}</Card.Text>
+                <Card.Text>{Users.role}</Card.Text>
+                <Card.Text>{Users.isBlocke}</Card.Text>
+                <Card.Text>{Users.cart}</Card.Text>
+                <Card.Text>{Users.wishlist}</Card.Text>
+                <Card.Text>{Users.createdAt}</Card.Text>
+                <Card.Text>{Users.updatedAt}</Card.Text>
+                <Card.Text>{Users.__v}</Card.Text>
               </Card.Body>
               {/* </a> */}
               {/* </Link> */}
@@ -71,4 +75,4 @@ const FetchAllData = () => {
   );
 };
 
-export default FetchAllData;
+export default Users;
