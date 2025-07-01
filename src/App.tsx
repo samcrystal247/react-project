@@ -20,6 +20,7 @@ import Signup from "./components/SignUp2/Signup (1)";
 import LogIn2 from "./components/LogIn/LogIn2";
 import LogIn from "./components/LogIn/LogIn2";
 import LogInNew from "./components/LogIn/LogIn2";
+import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/UsersData/:id" element={<UsersData />} />
         <Route path="/SignUp" element={<Signup />} />
         <Route path="/signin" element={<LogInNew />} />
+        <Route path="/upDateProfile" element={<UpdateProfile />} />
       </Routes>
     </>
   );

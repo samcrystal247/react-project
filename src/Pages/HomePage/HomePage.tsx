@@ -45,6 +45,9 @@ const HomePage = () => {
         <button>
           <Link to="/signin">Login</Link>
         </button>
+        <div>
+          <Link to="/upDateProfile">upDate Profile</Link>
+        </div>
       </div>
     </>
   );
