@@ -12,32 +12,41 @@ import FetchAllData from "../../components/FetchData/FetchAllData";
 import Users from "../../components/Users/Users";
 import { Link, useNavigate } from "react-router-dom";
 const HomePage = () => {
+  // const navigate = useNavigate();
+  // const handleNavigate = () => {
+  //   navigate("/SignUp");
+  // };
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/SignUp");
+    navigate("/signin");
   };
-
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Header />
-      <About />
-      <LoginScreen />
-      <Navbar2 />
-      <Serivice />
-      <Blog />
-      <Events />
-      <FetchAllData />
-      <Users />
-      <button>
-        <a href="SignUp">Register here</a>
-      </button>
-      <button>
-        <Link to="/SingUp">SingUp</Link>
-      </button>
-      <button onClick={handleNavigate}>New user? Register Here</button>
-    </div>
+    <>
+      <div>
+        <Navbar />
+        <Hero />
+        <Header />
+        <About />
+        <LoginScreen />
+        <Navbar2 />
+        <Serivice />
+        <Blog />
+        <Events />
+        <FetchAllData />
+        <Users />
+        <button>
+          <a href="SignUp">Register here</a>
+        </button>
+        <button>
+          <Link to="/SignUp">SingUp</Link>
+        </button>
+        <button onClick={handleNavigate}>New user? Register Here</button>
+        <div onClick={handleNavigate}>login here</div>
+        <button>
+          <Link to="/signin">Login</Link>
+        </button>
+      </div>
+    </>
   );
 };
 

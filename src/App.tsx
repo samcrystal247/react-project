@@ -17,6 +17,9 @@ import UserDetails from "./components/Users/UserDetails";
 import UsersData from "./components/Users/UserDetails";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Signup from "./components/SignUp2/Signup (1)";
+import LogIn2 from "./components/LogIn/LogIn2";
+import LogIn from "./components/LogIn/LogIn2";
+import LogInNew from "./components/LogIn/LogIn2";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +35,7 @@ function App() {
         <Route path="/productDetails/:id" element={<ProductDetails />} />
         <Route path="/UsersData/:id" element={<UsersData />} />
         <Route path="/SignUp" element={<Signup />} />
+        <Route path="/signin" element={<LogInNew />} />
       </Routes>
     </>
   );
