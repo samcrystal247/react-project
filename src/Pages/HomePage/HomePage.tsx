@@ -11,6 +11,7 @@ import Events from "../../Rough/Events";
 import FetchAllData from "../../components/FetchData/FetchAllData";
 import Users from "../../components/Users/Users";
 import { Link, useNavigate } from "react-router-dom";
+import DeleteUsersData from "../../components/DeleteUser/DeleteUser";
 const HomePage = () => {
   // const navigate = useNavigate();
   // const handleNavigate = () => {
@@ -34,6 +35,7 @@ const HomePage = () => {
         <Events />
         <FetchAllData />
         <Users />
+        <DeleteUsersData />
         <button>
           <a href="SignUp">Register here</a>
         </button>

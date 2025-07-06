@@ -3,6 +3,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link, useNavigate } from "react-router-dom";
+import { FaTrash } from "react-icons/fa";
 
 const FetchAllData = () => {
   const [viewResult, setViewResult] = useState([]);
@@ -58,6 +59,7 @@ const FetchAllData = () => {
                 <Card.Text>{items.price}</Card.Text>
                 <Card.Text>{items.quantity}</Card.Text>
                 <Card.Text>{items.sold}</Card.Text>
+                <Card.Text></Card.Text>
 
                 <Button variant="primary">Add to cart</Button>
               </Card.Body>
